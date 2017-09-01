@@ -4,7 +4,9 @@
 	<p>Pleas check the below errors:</p>
 	<ul>
 	{% for field in form %}
-	<li>{{field.label}} - {{ field.errors|striptags }}</li>
+    {% if field.errors %}
+  	<li>{{field.label}} - {{ field.errors|striptags }}</li>
+    {% endif %}
 	{% endfor %}
 	</ul>
 </div>
