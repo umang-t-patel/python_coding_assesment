@@ -1,0 +1,16 @@
+<form method="post" action="{% url 'appointment_save' %}" id="appointment_form">
+  {% if form.errors %}
+<div id="form-error">
+	<p>Pleas check the below errors:</p>
+	<ul>
+	{% for field in form %}
+	<li>{{field.label}} - {{ field.errors|striptags }}</li>
+	{% endfor %}
+	</ul>
+</div>
+{% endif %}
+  {% csrf_token %}
+  <div class="form-group">
+  {{ form.as_p }}
+  </div>
+</form>
