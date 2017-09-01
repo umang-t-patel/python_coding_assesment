@@ -13,6 +13,8 @@ tested with Django 1.11.4 version. To install it use the following command:
 Before running the application we need to create the needed DB tables:
 
     python manage.py migrate
+    python manage.py makemigrations coding_assesment_app
+    python manage.py migrate
 
 Now you can run the development web server:
 
