@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'coding_assesment_app',
-    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

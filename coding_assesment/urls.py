@@ -19,7 +19,7 @@ from coding_assesment_app import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.appointment_list, name='appointment_list'),
+    url(r'^$', views.index, name='index'),
+    url(r'search/$', views.appointment_list_all_filter, name='appointment_list_all_filter'),
     url(r'^create/$', views.appointment_save, name='appointment_save'),
-    url(r'^search/$', views.appointment_search, name='appointment_search'),
 ]

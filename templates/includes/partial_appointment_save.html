@@ -1,7 +1,7 @@
 <form method="post" action="{% url 'appointment_save' %}" id="appointment_form">
   {% if form.errors %}
 <div id="form-error">
-	<p>Pleas check the below errors:</p>
+	<p>Please check the below errors:</p>
 	<ul>
 	{% for field in form %}
     {% if field.errors %}

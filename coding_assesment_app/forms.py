@@ -4,17 +4,17 @@ import datetime
 
 
 class AppointmentForm(forms.ModelForm):
+    appointment_date = forms.DateField(label='Date',widget=forms.DateTimeInput(attrs={
+            'class':'form-control','type':'date'}))
+    appointment_time = forms.TimeField(label='Time',widget=forms.DateTimeInput(attrs={
+            'class':'form-control','type':'time'}))
     class Meta:
         model = Appointment
         fields = ('appointment_date', 'appointment_time', 'appointment_desc',)
         widgets = {
-            'appointment_date': forms.TextInput(attrs={'class': 'form-control', 'type': 'date'}),
-            'appointment_time': forms.TextInput(attrs={'class': 'form-control', 'type': 'time'}),
             'appointment_desc': forms.TextInput(attrs={'class': 'form-control'}),
         }
         labels = {
-            'appointment_date': 'Date',
-            'appointment_time': 'Time',
             'appointment_desc': 'Description',
         }
 
