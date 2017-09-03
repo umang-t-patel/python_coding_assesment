@@ -22,7 +22,8 @@
         </div>
     </div>
     <p>
-    <form method="post" action="{% url 'appointment_list_all_filter' %}" onsubmit="return false;" id="appointment_search">
+    <form method="post" action="{% url 'appointment_list_all_filter' %}" onsubmit="return false;"
+          id="appointment_search">
         {% csrf_token %}
         <div class="input-group">
             <input type="text" id="search_input" value="" class="form-control">
