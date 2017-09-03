@@ -7,8 +7,14 @@ The project only need a single Python 3.6 with Django 1.11.4 version.
 
 ### Clone the app on local machine
 
-    git clone https://github.com/umang-t-patel/python_coding_assessment.git
-
+1. Clone the repository
+ 
+        git clone https://github.com/umang-t-patel/python_coding_assessment.git
+        
+2. Go to the directory
+    
+        cd python_coding_assessment
+        
 ### Run Appointment Scheduler app on local machine
 1. To run this app on your local machine, you'll need a Python(3.6) set up, including Python, pip, and virtualenv
 2. Create an isolated Python environment, and install django
