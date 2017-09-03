@@ -1,18 +1,18 @@
-<form method="post" action="{% url 'appointment_save' %}" id="appointment_form">
-  {% if form.errors %}
-<div id="form-error">
-	<p>Please check the below errors:</p>
-	<ul>
-	{% for field in form %}
-    {% if field.errors %}
-  	<li>{{field.label}} - {{ field.errors|striptags }}</li>
+<form method="post" action="{% url 'appointment_save' %}" onsubmit="return false;" id="appointment_form">
+    {% if form.errors %}
+        <div id="form-error">
+            <p>Please check the below errors:</p>
+            <ul>
+                {% for field in form %}
+                    {% if field.errors %}
+                        <li>{{ field.label }} - {{ field.errors|striptags }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
     {% endif %}
-	{% endfor %}
-	</ul>
-</div>
-{% endif %}
-  {% csrf_token %}
-  <div class="form-group">
-  {{ form.as_p }}
-  </div>
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form.as_p }}
+    </div>
 </form>

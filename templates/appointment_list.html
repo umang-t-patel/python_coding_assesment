@@ -1,49 +1,49 @@
 {% load static %}
 <html>
 <head>
-  <title>Appointment Scheduler</title>
-  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'css/app.css' %}" rel="stylesheet">
+    <title>Appointment Scheduler</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/app.css' %}" rel="stylesheet">
 </head>
 <body>
-  <div class="container centered">
+<div class="container centered">
     <h2>Appointment Scheduler</h2>
     <p>
-      <button type="button" class="btn btn-primary js-create-appointment" data-url="{% url 'appointment_save' %}">
-        New
-      </button>
-      <button type="button" class="btn btn-primary js-cancel-appointment">
-        Cancel
-      </button>
+        <button type="button" class="btn btn-primary js-create-appointment" data-url="{% url 'appointment_save' %}">
+            New
+        </button>
+        <button type="button" class="btn btn-primary js-cancel-appointment">
+            Cancel
+        </button>
     </p>
     <div class="panel panel-default js-create-panel">
-      <div class="panel-heading"><h4>Create Appointment</h4></div>
-      <div class="panel-body js-create-body">
-      </div>
+        <div class="panel-heading"><h4>Create Appointment</h4></div>
+        <div class="panel-body js-create-body">
+        </div>
     </div>
     <p>
-      <form method="post" action="{% url 'appointment_list_all_filter' %}" id="appointment_search">
+    <form method="post" action="{% url 'appointment_list_all_filter' %}" onsubmit="return false;" id="appointment_search">
         {% csrf_token %}
         <div class="input-group">
-          <input type="text" id="search_input" value="" class="form-control">
-          <span class="input-group-btn">
+            <input type="text" id="search_input" value="" class="form-control">
+            <span class="input-group-btn">
             <button type="button" class="btn btn-primary js-search-appointment">
               Search
             </button>
           </span>
         </div>
-      </form>
+    </form>
     </p>
     <div class="panel panel-default js-list-panel">
-      <div class="panel-heading"><h4>Appointment List</h4></div>
-      <div class="panel-body js-list-body">
-      </div>
+        <div class="panel-heading"><h4>Appointment List</h4></div>
+        <div class="panel-body js-list-body">
+        </div>
     </div>
-  </div>
-  <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
-  <script src="{% static 'js/app.js' %}"></script>
-  <script type="text/javascript">
-  var csrftoken = '{{ csrf_token }}';
-  </script>
+</div>
+<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<script type="text/javascript">
+    var csrftoken = '{{ csrf_token }}';
+</script>
 </body>
 </html>

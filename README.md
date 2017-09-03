@@ -1,4 +1,4 @@
-# Python Coding Assesment
+# Python Coding Assessment
 A simple application to manage schedule
 
 ## Install Required Packages
@@ -13,7 +13,7 @@ tested with Django 1.11.4 version. To install it use the following command:
 Before running the application we need to create the needed DB tables:
 
     python manage.py migrate
-    python manage.py makemigrations coding_assesment_app
+    python manage.py makemigrations coding_assessment_app
     python manage.py migrate
 
 Now you can run the development web server:
